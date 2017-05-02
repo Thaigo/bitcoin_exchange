@@ -3,7 +3,15 @@ class HomeController < ApplicationController
   end
 
   def exchange
+    
     value = Currency.exchange params[:currency], params[:currency_destination], params[:quantity].to_f
+    
+    render json: {"value": value}
+  end
+
+  def bitcoin
+    value = BitCurrency.bitcoin params[:currency], params[:quantity].to_f
+
     render json: {"value": value}
   end
 end

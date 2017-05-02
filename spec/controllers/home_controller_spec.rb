@@ -24,7 +24,27 @@ RSpec.describe HomeController, type: :controller do
     it "returns a numeric value" do
       post :exchange, params: {currency: @currency, currency_destination: @currency_destination, quantity: @quantity}
       value = JSON.parse(response.body)['value']
+      
       expect(value.is_a? Numeric).to eql(true)
+    end
+  end
+
+  describe "GET #bitcoin" do
+    before do
+      json = JSON.parse(File.read("./spec/fixtures/currency_list.json"))
+      @currency = json['currency_list']
+      @quantity = rand(1..9999)
+    end
+ 
+    it "returns http success" do
+      post :bitcoin, params: {currency: @currency, quantity: @quantity}
+      expect(response).to have_http_status(:success)
+    end
+ 
+    it "returns a string value" do
+      post :bitcoin, params: {currency: @currency, quantity: @quantity}     
+      
+      expect(value.kind_of? String).to eql(true)
     end
   end
  
