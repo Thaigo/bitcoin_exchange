@@ -13,3 +13,5 @@ $(document).ready ->
         success: (data, textStatus, jqXHR) ->
           $('#result').val data.value
       return false;
+
+  

@@ -16,3 +16,10 @@
 //= require bootstrap
 //= require turbolinks
 //= require_tree .
+
+
+function trocar(currency, currency_destination){
+	var aux = document.getElementById(currency).value;
+	document.getElementById(currency).value = document.getElementById(currency_destination).value;
+	document.getElementById(currency_destination).value = aux;
+}
