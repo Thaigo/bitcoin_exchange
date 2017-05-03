@@ -1,24 +1,24 @@
-# README
+# Ruby on Rails - Bitcoin-Exchange
+=========================================
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Summary
+-------
+Projeto conversor de moeda bitcoin consumindo api
 
-Things you may want to cover:
+Generated project characteristics
+-------------------------
 
-* Ruby version
+* API - https://blockchain.info/api
+* API - http://fixer.io/
 
-* System dependencies
 
-* Configuration
+Prerequisites
+-------------
 
-* Database creation
+- Rails 5
+- bundle install
+- rails db:migrate
+- rails s
 
-* Database initialization
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+![bitcoin-exchange](https://github.com/Thaigo/bitcoin_exchange/blob/master/public/project.png)
