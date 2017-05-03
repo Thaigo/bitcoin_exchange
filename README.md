@@ -3,7 +3,7 @@
 
 Summary
 -------
-Projeto conversor de moeda bitcoin consumindo api
+Project bitcoin currency converter consuming api
 
 Generated project characteristics
 -------------------------
