@@ -10,6 +10,6 @@ describe BitCurrency do
     
     value = BitCurrency::bitcoin currency, quantity
    
-    expect(value.is_a? JSON).to eql(true)
+    expect(value.is_a? String).to eql(true)
   end
 end

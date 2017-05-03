@@ -39,13 +39,7 @@ RSpec.describe HomeController, type: :controller do
     it "returns http success" do
       post :bitcoin, params: {currency: @currency, quantity: @quantity}
       expect(response).to have_http_status(:success)
-    end
- 
-    it "returns a string value" do
-      post :bitcoin, params: {currency: @currency, quantity: @quantity}     
-      
-      expect(value.kind_of? String).to eql(true)
-    end
+    end   
   end
  
 end

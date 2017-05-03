@@ -1,6 +1,6 @@
 $(document).ready ->
   $('form').submit ->
-    if $('form').attr('action') == '/bitcoin'
+    if $('#bitcoin_form').attr('action') == '/bitcoin'
       $.ajax '/bitcoin',
         type: 'POST'
         dataType: 'json'
@@ -11,5 +11,7 @@ $(document).ready ->
           alert textStatus
         success: (data, textStatus, jqXHR) ->
           $('#bit_result').val data.value
-      return false
-    return
+      return false;
+
+
+    
