@@ -8,14 +8,14 @@
         <div class="local_currency">
           <div class="form-group">
             <p class="title">Moeda Local</p>
-            <%= select_tag "currency", options_for_select(currency_select, "BRL"), class: "form-control", id: "currency" %>
+            <%= select_tag "currency", options_for_select(currency_select, "BRL"), class: "form-control", id: "bit_currency" %>
           </div>
           <div class="form-group">
-            <input type="number" name="quantity" id="quantity" class="form-control" placeholder="Quantidade ($10)" step="any" required>
+            <input type="number" name="quantity" id="bit_quantity" class="form-control" placeholder="Quantidade ($10)" step="any" required>
           </div>
           
           <div class="form-group">
-            <input type="text" id="result" name="result" class="form-control" placeholder="Valor em Bitcoin" readonly>
+            <input type="text" id="bit_result" name="result" class="form-control" placeholder="Valor em Bitcoin" readonly>
           </div>
         </div>    
         

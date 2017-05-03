@@ -5,9 +5,9 @@ require 'json'
    def self.bitcoin currency, quantity
      
     begin      
-      value = RestClient.get "https://blockchain.info/tobtc?currency=#{currency}&value=#{quantity}"      
+      value = RestClient.get "https://blockchain.info/tobtc?currency=#{currency}&value=#{quantity}&format=json"      
       
-      return value.to_json
+      return value.to_f
     rescue
       return 'Problem in Conversion'      
     end
