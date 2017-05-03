@@ -1,5 +1,5 @@
 $(document).ready ->
-  $('form').submit ->
+  $('form :input').on 'change keyup', ->
     if $('#bitcoin_form').attr('action') == '/bitcoin'
       $.ajax '/bitcoin',
         type: 'POST'
